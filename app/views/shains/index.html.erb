@@ -1,0 +1,39 @@
+<h1>Listing shains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shainname</th>
+      <th>Shainnameyomi</th>
+      <th>Tel1</th>
+      <th>Tel2</th>
+      <th>Postno</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shains.each do |shain| %>
+      <tr>
+        <td><%= shain.shainName %></td>
+        <td><%= shain.shainNameYomi %></td>
+        <td><%= shain.tel1 %></td>
+        <td><%= shain.tel2 %></td>
+        <td><%= shain.postNo %></td>
+        <td><%= shain.address1 %></td>
+        <td><%= shain.address2 %></td>
+        <td><%= link_to 'Show', shain %></td>
+        <td><%= link_to 'Edit', edit_shain_path(shain) %></td>
+        <td><%= link_to 'Destroy', shain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shain', new_shain_path %>

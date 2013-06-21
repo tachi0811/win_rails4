@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shainname:</strong>
+  <%= @shain.shainName %>
+</p>
+
+<p>
+  <strong>Shainnameyomi:</strong>
+  <%= @shain.shainNameYomi %>
+</p>
+
+<p>
+  <strong>Tel1:</strong>
+  <%= @shain.tel1 %>
+</p>
+
+<p>
+  <strong>Tel2:</strong>
+  <%= @shain.tel2 %>
+</p>
+
+<p>
+  <strong>Postno:</strong>
+  <%= @shain.postNo %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @shain.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @shain.address2 %>
+</p>
+
+<%= link_to 'Edit', edit_shain_path(@shain) %> |
+<%= link_to 'Back', shains_path %>
